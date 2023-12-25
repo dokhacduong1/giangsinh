@@ -7,17 +7,23 @@
     margin-right: 70px;
     color: black;
     text-align: center;
-    animation: moveBackAndForth 4s linear infinite; /* 4s là thời gian animation, linear là kiểu di chuyển, infinite là lặp vô hạn */
+    animation: moveBackAndForth 4s linear infinite;
+    /* 4s là thời gian animation, linear là kiểu di chuyển, infinite là lặp vô hạn */
 }
 
 @keyframes moveBackAndForth {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
+
     50% {
-        transform: translateX(50px); /* Điều chỉnh khoảng cách di chuyển */
+        transform: translateX(50px);
+        /* Điều chỉnh khoảng cách di chuyển */
     }
 }
+
 h2 {
     font-family: 'Roboto Mono', monospace;
     font-size: 20px;
@@ -3460,7 +3466,7 @@ body {
 .container {
     background-color: transparent;
     border-radius: 4px;
-   
+
     height: 300px;
     margin: 40px auto 50px auto;
     position: relative;
@@ -3497,9 +3503,8 @@ body {
 
 .letter-image {
     position: absolute;
-    bottom: -115%;
-    right: 10%;
-    width: 200px;
+    right: 50%;
+    top: 148%;
     height: 200px;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -3507,14 +3512,28 @@ body {
     cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+    .letter-image {
+        position: absolute;
+        bottom: -115%;
+        right: 10%;
+        width: 200px;
+        height: 200px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+
 .animated-mail {
     position: absolute;
-  
-   
+
+
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     transition: 0.4s;
-   
+
 }
 
 .animated-mail .body1 {
@@ -3549,7 +3568,7 @@ body {
     bottom: 0px;
     position: absolute;
     width: 198px;
- 
+
     background: white;
     z-index: 1;
     overflow: hidden;
@@ -3634,14 +3653,16 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
 }
-.modal p{
+
+.modal p {
     color: #000;
     font-family: 'Roboto Mono', monospace;
 
 }
+
 /* Modal Content/Box */
 .modal-content {
-   
+
     transition: all 0.5s;
     border-radius: 10px;
     background-color: rgba(254, 254, 254, 0.767);
