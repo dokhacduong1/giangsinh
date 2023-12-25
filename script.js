@@ -248,4 +248,23 @@ Zoomer.prototype.checkStates = function () {
 };
 
 
-})(window.KO = window.KO || {}, jQuery);
+})
+
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+let buttonClickModel = document.querySelector(".letter-image .letter");
+var audio = new Audio('giangsinh.mp3');
+buttonClickModel.addEventListener("click",()=>{
+    modal.style.display ="block"
+   
+    audio.play();
+})
+let buttonClose = document.querySelector(".modal-content .close");
+buttonClose.addEventListener("click",()=>{
+    modal.style.display ="none"
+    audio.pause();
+})
+
